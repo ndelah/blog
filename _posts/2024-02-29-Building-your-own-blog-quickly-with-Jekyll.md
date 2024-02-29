@@ -3,8 +3,6 @@ title: "Building your own blog on Jekyll the easy way"
 layout: post
 ---
 
-# Building your own blog on Jekyll the easy way
-
 **TLDR:** Build a nice website using templates, zero knowledge in 10 minutes time.
 
 ## Why do we  need another tutorial on Jekyll?
@@ -78,74 +76,49 @@ Editing files on Github is fast for small changes but not convenient. The better
 1. Open your terminal.
 2. Clone the forked repository to your local machine. Replace **`yourusername`** with your actual GitHub username.
     
-    ```
-    shCopy code
+    ```sh
     git clone https://github.com/yourusername/contrast.git
-    
+
     ```
     
 3. Change into the cloned directory.
     
+    ```sh
+    cd contrast    
     ```
-    shCopy code
-    cd contrast
-    
-    ```
-    
 
 ### **Step 3: Install Dependencies**
 
 1. Make sure you have Ruby and Bundler installed. Then, install the Jekyll dependencies.
     
-    ```
-    shCopy code
+    ```sh
     bundle install
     
     ```
-    
 
 ### **Step 4: Customize Your Site**
 
 1. Edit the **`_config.yml`** file in your site directory to customize your site's settings, such as **`title`**, **`email`**, **`description`**, **`author`**, etc.
 2. You can create new posts by adding markdown files in the **`_posts`** directory. Follow the naming convention **`YYYY-MM-DD-name-of-post.md`** and the format provided in the example posts.
 
-### **Step 5: Test Your Site Locally**
-
-1. Serve your site locally to see how it looks.
-    
-    ```
-    shCopy code
-    bundle exec jekyll serve
-    
-    ```
-    
-2. Open a web browser and go to **`http://localhost:4000`** to preview your site.
 
 ### **Step 6: Push Changes to GitHub**
 
 1. Add the changes to Git.
     
-    ```
-    shCopy code
+    ```sh
     git add .
-    
     ```
     
 2. Commit the changes.
     
-    ```
-    shCopy code
+    ```sh
     git commit -m "Initial blog setup with Contrast theme"
-    
     ```
     
 3. Push the changes to your GitHub repository.
     
-    ```
-    shCopy code
+    ```sh
     git push origin master
-    
     ```
     
-
-###
