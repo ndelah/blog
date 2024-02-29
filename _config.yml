@@ -1,5 +1,6 @@
-title: "Blog Title"
-author: "Blog Author"
+title: "Nicolas Delahousse"
+author: "Nicolas Delahousse"
+email: delahoussenicolas@gmail.com
 description: "Made with <b style=\"color: #f45;\">&lt;3</b>"
 permalink: /:title/
 lang: "en"
