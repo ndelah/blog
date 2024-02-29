@@ -1,3 +1,8 @@
+---
+title: "Building your own blog on Jekyll the easy way"
+layout: post
+---
+
 # Building your own blog on Jekyll the easy way
 
 **TLDR:** Build a nice website using templates, zero knowledge in 10 minutes time.
