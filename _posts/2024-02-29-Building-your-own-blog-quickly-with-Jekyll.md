@@ -7,36 +7,43 @@ layout: post
 
 ## Why do we  need another tutorial on Jekyll?
 
-There’s thousands of ways of making your blog. Using [Jekyll](https://jekyllrb.com/) is just one of the many options. 
+With countless methods to craft a blog, Jekyll offers one such path. Despite its learning curve for beginners, this guide aims to expedite the process for those eager to bypass extensive documentation reading.
 
-Just like the website promises - or any other tutorial on the topic - it’s relatively easy to get started. The emphasis is on relatively. If you like the appeal of Jekyll but have next to zero experience with code it can be challenging to get started.
+The approach here isn't about mastering Jekyll's inner workings but rather achieving a functional blog setup swiftly. It's akin to driving a car without needing to build it from scratch—ideal for those prioritizing speed over detailed understanding.
 
-What I propose here today is the fastest way to set-up your blog using Jekyll if you have zero interest in reading any documentation. It’s not the cleanest way because you won’t necessarily fully understand how everything works, but you’ll know enough to mess. If every time you wanted to use a mode of transportation you had to build it, you’d probably walk everywhere. Some people have the time and patience to build a car, other just want to learn to drive.
-
-Why would I do this? The Jekyll documentation is great but the **Getting started** section didn’t get me started fast enough imo. Sure it, helps you quickly make an empty site, but then you still have to read all of the documentation so you can build your entire site from scratch. 
+Why this guide? While Jekyll's documentation is comprehensive, its Getting Started segment falls short in rapid deployment, especially for complete novices desiring an immediate and tangible outcome.
 
 ## Prerequisites
 
-- You made an account on Github
-- You understand what [Github](https://kinsta.com/knowledgebase/what-is-github/) is. It’s a platform to share and host code. Think Google Drive for code.
-- You understand what Jekyll is (it’s a tool for making websites).
-- You understand that Jekyll and Github work hand in hand. Github Pages is a free service that allows your website to live on Github.
+A GitHub account creation.
+Familiarity with GitHub, the code hosting and sharing platform.
+Basic understanding of Jekyll as a website creation tool.
+Knowledge that Jekyll and GitHub integrate seamlessly, with GitHub Pages offering free website hosting.
 
-## Objectives and steps
+## The approach
 
-**Objective:** Make and learn to use a simple blog based on a nice template someone else made. 
+The objective is to launch a simple blog using an existing template.
 
-**Results:**
+After this quickstart you will have learned:
 
-- Host the website on Github
+- Where to find templates
+- How to "download" them and host them on Github
+- How the website is published
+- How to edit the very basics of your website in a quick and dirty way on Github
+- How to edit your blog post on any editor locally and "upload" (commit) them to Github.
+
+What you **won't** learn:
+- the specific structure of features of every template
+- Fundamental features of Jekyll.
+- The basics of Git versioning.
 
 **Steps:**
 
-1. We install jekyll
-2. We choose a template we like and “copy” and “paste” it to our computer
+1. We choose a template we like and “copy” and “paste” it to our computer
+2. We install jekyll
 3. Host our website on Github
-4. Add pages
-5. Profit
+4. Add pages (on Github Directly)
+5. Add pages locally
 
 ### Step 1: Choosing a theme you like
 
@@ -65,15 +72,19 @@ Your website will live Github through Github Pages.
 
 ### Step 3.5: Personalizing your website the fast and suboptimal way
 
-You can edit your blog by directly modifying the files straight from Github or add files. All your blog posts are located in the `_posts` folder of your repository.  The posts are made using Markdown. Whenever you make a post , create a new markdown file that you add to the `_posts` folder. Copy the format of the file names `[YYYY-MM-DD-title.md](http://YYYY-MM-DD-title.md)` and copy the beginning of each file called the **frontmatter** that is at the top of the example files. 
+YEdit or add files directly on GitHub for immediate updates. Blog posts reside in the _posts folder, using Markdown format. Follow the naming and frontmatter conventions shown in example posts. Remember, changes on GitHub require commits to save.
 
-Whenever you make changes to a Github repo whether to changes to a file (add, remove, updated, delete) you need to save those results. Github calls this making commits. 
-
-Editing files on Github is fast for small changes but not convenient. The better way is to work with files locally on your computer using whatever tool you prefer to write markdown files then upload them to your github repo. 
+For substantial edits, work locally and upload changes to GitHub for a smoother experience.
 
 ### **Step 4: Clone Your Forked Repository**
 
 1. Open your terminal.
+2. Navigate to the directory where you want to keep your blog
+
+    ```sh
+    cd ./directory_name/sub_directory_name
+    ```
+
 2. Clone the forked repository to your local machine. Replace **`yourusername`** with your actual GitHub username.
     
     ```sh
@@ -93,6 +104,7 @@ Editing files on Github is fast for small changes but not convenient. The better
     
     ```sh
     bundle install
+    gem install bundler jekyll
     
     ```
 
@@ -102,23 +114,36 @@ Editing files on Github is fast for small changes but not convenient. The better
 2. You can create new posts by adding markdown files in the **`_posts`** directory. Follow the naming convention **`YYYY-MM-DD-name-of-post.md`** and the format provided in the example posts.
 
 
-### **Step 6: Push Changes to GitHub**
+### **Step 5: Push Changes to GitHub**
+Imagine you're working on a digital scrapbook on your computer, where you've just added some new pages or made changes to existing ones. To update the online version of your scrapbook (so everyone else can see the changes), you need to follow a few steps using Git, a tool that helps manage different versions of your project.
 
 1. Add the changes to Git.
     
     ```sh
     git add .
     ```
+
+This command is like telling your computer, "Hey, take a snapshot of all the changes I've made to my scrapbook." The dot here means "everything in this folder," so it's a quick way to grab all the updates you've made.
+
     
 2. Commit the changes.
     
     ```sh
     git commit -m "Initial blog setup with Contrast theme"
     ```
+
+ Now that you've taken snapshots of your changes, you need to put them in a photo album so they're organized and labeled. This command does just that. The -m stands for "message," where you describe what changes or updates you're adding to the album. 
+
+
     
 3. Push the changes to your GitHub repository.
     
     ```sh
     git push origin master
     ```
-    
+
+
+Finally, you want to share this updated photo album with your friends and family online. This command uploads your new album to the online version of your scrapbook, so everyone can see the latest changes. "Origin" refers to the online storage location for your scrapbook, and "master" is like the main version of your scrapbook that everyone sees.
+
+## You're done
+You're done, you've set-up your blog. Enjoy writing and sharing your articles. 
